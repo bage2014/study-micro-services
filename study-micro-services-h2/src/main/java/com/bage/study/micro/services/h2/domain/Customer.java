@@ -1,4 +1,4 @@
-package com.bage.study.micro.services.h2.demo.domain;
+package com.bage.study.micro.services.h2.domain;
 
 
 public class Customer {
@@ -6,10 +6,16 @@ public class Customer {
     private long id;
     private String firstName, lastName;
 
-    public Customer(long id, String firstName, String lastName) {
+    public Customer(int id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+    
+    public Customer(long id, String firstName, String lastName) {
+    	this.id = id;
+    	this.firstName = firstName;
+    	this.lastName = lastName;
     }
 
     @Override

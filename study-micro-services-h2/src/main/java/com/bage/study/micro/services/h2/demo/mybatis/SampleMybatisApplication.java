@@ -1,4 +1,4 @@
-package com.bage.study.micro.services.h2.demo;
+package com.bage.study.micro.services.h2.demo.mybatis;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,19 +8,29 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import com.bage.study.micro.services.h2.demo.domain.Customer;
+@SpringBootApplication
+public class SampleMybatisApplication implements CommandLineRunner {
 
+    private static final Logger log = LoggerFactory.getLogger(SampleMybatisApplication.class);
 
-public class InitCommandLineRunner implements CommandLineRunner {
+    private final CustomerMapper customerMapper;
 
-    private static final Logger log = LoggerFactory.getLogger(InitCommandLineRunner.class);
+    public SampleMybatisApplication(CustomerMapper customerMapper) {
+        this.customerMapper = customerMapper;
+    }
 
+    public static void main(String[] args) {
+        SpringApplication.run(SampleMybatisApplication.class, args);
+    }
 
     @Autowired
     JdbcTemplate jdbcTemplate;
 
+    @Override
     public void run(String... strings) throws Exception {
 
         log.info("Creating tables");
@@ -40,10 +50,8 @@ public class InitCommandLineRunner implements CommandLineRunner {
         // Uses JdbcTemplate's batchUpdate operation to bulk load data
         jdbcTemplate.batchUpdate("INSERT INTO customers(first_name, last_name) VALUES (?,?)", splitUpNames);
 
-        log.info("Querying for customer records where first_name = 'Josh':");
-        jdbcTemplate.query(
-                "SELECT id, first_name, last_name FROM customers WHERE first_name = ?", new Object[] { "Josh" },
-                (rs, rowNum) -> new Customer(rs.getLong("id"), rs.getString("first_name"), rs.getString("last_name"))
-        ).forEach(customer -> log.info(customer.toString()));
+        log.info("--------查询数据-------");
+        System.out.println(this.customerMapper.queryById("1"));
     }
+
 }
