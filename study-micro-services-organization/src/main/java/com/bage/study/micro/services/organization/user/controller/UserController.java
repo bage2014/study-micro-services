@@ -1,5 +1,7 @@
 package com.bage.study.micro.services.organization.user.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,5 +22,11 @@ public class UserController {
 	@ResponseBody
 	public User getUser(@PathVariable String id) {
 		return userService.getUserById(id);
+	}
+	
+	@RequestMapping("/all")
+	@ResponseBody
+	public List<User> getUser() {
+		return userService.queryAll();
 	}
 }
