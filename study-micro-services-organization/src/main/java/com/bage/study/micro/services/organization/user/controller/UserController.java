@@ -1,0 +1,24 @@
+package com.bage.study.micro.services.organization.user.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.bage.study.micro.services.organization.user.domain.User;
+import com.bage.study.micro.services.organization.user.service.UserService;
+
+@Controller
+@RequestMapping("/user")
+public class UserController {
+
+	@Autowired
+	UserService userService;
+	
+	@RequestMapping("/{id}")
+	@ResponseBody
+	public User getUser(@PathVariable String id) {
+		return userService.getUserById(id);
+	}
+}

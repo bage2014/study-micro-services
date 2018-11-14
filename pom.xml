@@ -19,5 +19,7 @@
   </properties>
   <modules>
     <module>study-micro-services-spring-boot</module>
+    <module>study-micro-services-organization</module>
+    <module>study-micro-services-h2</module>
   </modules>
 </project>
