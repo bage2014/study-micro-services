@@ -25,5 +25,6 @@
     <module>study-micro-services-spring-cloud-netflix</module>
     <module>study-micro-services-eureka</module>
     <module>study-micro-services-eureka-client1</module>
+    <module>study-micro-services-eureka-client2</module>
   </modules>
 </project>
