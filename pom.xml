@@ -23,7 +23,7 @@
     <module>study-micro-services-h2</module>
     <module>study-micro-services-multi-datasources</module>
     <module>study-micro-services-spring-cloud-netflix</module>
-    <module>study-micro-services-eureka-server</module>
+    <module>study-micro-services-eureka</module>
     <module>study-micro-services-eureka-client1</module>
   </modules>
 </project>
