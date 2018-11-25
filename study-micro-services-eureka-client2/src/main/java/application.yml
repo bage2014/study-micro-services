@@ -3,7 +3,7 @@ server:
   
 Spring:
     application:
-     name: cloud-client1
+     name: cloud-client
   
 eureka:
   instance:
