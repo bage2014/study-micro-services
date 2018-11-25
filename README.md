@@ -12,7 +12,7 @@
 - study-micro-services-eureka spring cloud与eureka的server服务
 - study-micro-services-eureka-client1 web服务、spring cloud与eureka的client服务
 - study-micro-services-ribbon 负载均衡服务
-###项目请求路径###
+### 项目请求路径 ###
 - 注册中心
  - 端口 8761 [http://localhost:8761/](http://localhost:8761/ "注册中心")
 - 客户端实例1
