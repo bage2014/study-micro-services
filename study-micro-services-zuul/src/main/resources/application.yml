@@ -1,0 +1,19 @@
+server:
+  port: 8888
+  
+Spring:
+    application:
+     name: cloud-zuul
+
+zuul:
+  routes:
+    users:
+      path: /api-zuul-ribbon/**
+      serviceId: cloud-ribbon
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

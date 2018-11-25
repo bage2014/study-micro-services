@@ -11,8 +11,10 @@
 - study-micro-services-organization 组织机构服务
 - study-micro-services-spring-boot web服务、spring boot服务
 - study-micro-services-eureka spring cloud与eureka的server服务
-- study-micro-services-eureka-client1 web服务、spring cloud与eureka的client服务
+- study-micro-services-eureka-client1 web服务、spring cloud与eureka的client服务1
+- study-micro-services-eureka-client2 web服务、spring cloud与eureka的client服务2
 - study-micro-services-ribbon 负载均衡服务
+- study-micro-services-zuul 网关服务
 
 ## 项目请求路径 ##
 #### 注册中心 ####
@@ -27,3 +29,7 @@
  - 应用名称 cloud-ribbon
  - 端口 8088 [http://localhost:8088/](http://localhost:8088/ "负载均衡")
  - 轮询负载用例 [http://localhost:8088/eurekaClient/clients/CLOUD-CLIENT](http://localhost:8088/eurekaClient/clients/CLOUD-CLIENT "测试用例")
+#### 网关 ####
+ - 应用名称 cloud-zuul
+ - 端口 8888 [http://localhost:8888/](http://localhost:8888/ "网关")
+ - 网关请求用例 [http://localhost:8888/api-zuul-ribbon/eurekaClient/clients/CLOUD-CLIENT](http://localhost:8888/api-zuul-ribbon/eurekaClient/clients/CLOUD-CLIENT "测试用例")
