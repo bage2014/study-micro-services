@@ -1,9 +1,9 @@
 server:
-  port: 8082
+  port: 8088
   
 Spring:
     application:
-     name: cloud-client1
+     name: cloud-ribbon
   
 eureka:
   instance:
