@@ -1,9 +1,8 @@
 package com.bage.study.micro.services.h2.demo.mybatis;
 
+import com.bage.study.micro.services.h2.domain.Customer;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-
-import com.bage.study.micro.services.h2.domain.Customer;
 
 @Mapper
 public interface CustomerMapper {
