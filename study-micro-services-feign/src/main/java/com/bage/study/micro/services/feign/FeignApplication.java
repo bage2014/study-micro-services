@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 @RestController
 @EnableFeignClients
-public class RibbonApplication {
+public class FeignApplication {
 	
 	@Bean
 	@LoadBalanced
@@ -28,7 +28,7 @@ public class RibbonApplication {
     }
 
     public static void main(String[] args) {
-    	SpringApplication.run(RibbonApplication.class, args);
+    	SpringApplication.run(FeignApplication.class, args);
     }
 
 }

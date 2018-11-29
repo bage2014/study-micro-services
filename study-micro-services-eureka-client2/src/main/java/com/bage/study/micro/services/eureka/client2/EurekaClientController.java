@@ -25,5 +25,11 @@ public class EurekaClientController {
 		System.out.println(stringBuilder.toString());
 		return stringBuilder.toString();
 	}
+
+	@GetMapping("/feign")
+	public String feign() {
+		System.out.println("22222");
+		return "2";
+	}
 }
 
