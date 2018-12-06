@@ -28,6 +28,7 @@
     <module>study-micro-services-eureka-client2</module>
     <module>study-micro-services-ribbon</module>
     <module>study-micro-services-zuul</module>
-      <module>study-micro-services-feign</module>
+    <module>study-micro-services-feign</module>
+  
   </modules>
 </project>
