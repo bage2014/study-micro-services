@@ -7,9 +7,12 @@ Spring:
 
 zuul:
   routes:
-   eurekaClient:
+   cloud-ribbon:
     path: /cloud-ribbon/**
     serviceId: cloud-ribbon
+   cloud-feign:
+    path: /cloud-feign/**
+    serviceId: cloud-feign
 
 eureka:
   instance:
