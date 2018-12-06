@@ -7,9 +7,9 @@ Spring:
 
 zuul:
   routes:
-    users:
-      path: /api-zuul-ribbon/**
-      serviceId: cloud-ribbon
+   eurekaClient:
+    path: /cloud-ribbon/**
+    serviceId: cloud-ribbon
 
 eureka:
   instance:
