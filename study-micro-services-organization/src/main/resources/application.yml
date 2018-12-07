@@ -7,8 +7,18 @@ mybatis:
   
 Spring:
     application:
-     name: cloud-client
-  
+      name: cloud-client
+    h2:
+      console:
+        path: /h2-console   # h2 web consloe 路径
+        enabled: true       # 开启 h2 web consloe，默认为 false
+        settings:
+          web-allow-others: true    #允许远程访问 h2 web consloe
+    datasource:
+      username: sa
+      url: jdbc:h2:~/test;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE
+      driver-class-name:  org.h2.Driver
+     
 eureka:
   instance:
     hostname: localhost
