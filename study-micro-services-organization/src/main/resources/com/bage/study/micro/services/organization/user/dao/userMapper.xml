@@ -15,7 +15,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bage.study.micro.services.organization.user.dao.UserMapper">
-    <select id="queryAll" resultType="User">
+    <select id="queryAll" resultType="com.bage.study.micro.services.organization.user.domain.User">
         select * from users
     </select>
 </mapper>
