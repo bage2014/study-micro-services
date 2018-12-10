@@ -13,8 +13,11 @@
 - study-micro-services-organization 组织机构服务
 - study-micro-services-spring-boot web服务、spring boot服务
 - study-micro-services-eureka spring cloud与eureka的server服务
-- study-micro-services-eureka-client1 client服务1, 服务名称为：cloud-client
-- study-micro-services-eureka-client2 client服务2, 服务名称为：cloud-client
+- study-micro-services-eureka-server2 server服务2,与cloud-server3相互注册，服务名称为：cloud-server2
+- study-micro-services-eureka-server3 server服务3,与cloud-server2相互注册，服务名称为：cloud-server3
+- study-micro-services-eureka-client1 client服务1,注册到study-micro-services-eureka  服务名称为：cloud-client
+- study-micro-services-eureka-client2 client服务2,注册到study-micro-services-eureka  服务名称为：cloud-client
+- study-micro-services-eureka-client3 client服务3,注册到cloud-server2和cloud-server3, 服务名称为：cloud-client
 - study-micro-services-ribbon 负载均衡服务
 - study-micro-services-zuul 网关服务
 
