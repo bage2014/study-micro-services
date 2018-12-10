@@ -1,0 +1,15 @@
+server:
+  port: 8763
+
+Spring:
+    application:
+      name: cloud-server3
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # registerWithEureka: false
+    # fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/,http://localhost:8763/eureka/
