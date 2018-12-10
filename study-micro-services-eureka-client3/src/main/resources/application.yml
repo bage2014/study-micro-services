@@ -1,0 +1,13 @@
+server:
+  port: 8083
+  
+Spring:
+    application:
+     name: cloud-client
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/,http://localhost:8763/eureka/

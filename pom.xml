@@ -32,6 +32,7 @@
       <module>study-micro-services-eureka-server2</module>
       <module>study-micro-services-eureka-server3</module>
     <module>study-micro-services-eureka-server3</module>
+      <module>study-micro-services-eureka-client3</module>
 
   </modules>
 </project>
