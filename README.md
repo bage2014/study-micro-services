@@ -18,18 +18,28 @@
 - study-micro-services-eureka-client1 client服务1,注册到study-micro-services-eureka  服务名称为：cloud-client
 - study-micro-services-eureka-client2 client服务2,注册到study-micro-services-eureka  服务名称为：cloud-client
 - study-micro-services-eureka-client3 client服务3,注册到cloud-server2和cloud-server3, 服务名称为：cloud-client
-- study-micro-services-ribbon 负载均衡服务
-- study-micro-services-zuul 网关服务
+- study-micro-services-ribbon 负载均衡服务, 服务名称为：cloud-ribbon
+- study-micro-services-zuul 网关服务, 服务名称为：cloud-zuul
+- study-micro-services-multi-datasources 多数据源Spring Boot 服务
+- study-micro-services-feign Feign服务,注册到cloud-server, 服务名称为：cloud-feign
+
 
 ## 项目请求路径 ##
 #### 注册中心 ####
  - 端口 8761 [http://localhost:8761/](http://localhost:8761/ "注册中心")
+#### 注册中心群2 ####
+ - 端口 8762 [http://localhost:8762/](http://localhost:8762/ "注册中心")
+#### 注册中心群3 ####
+ - 端口 8763 [http://localhost:8763/](http://localhost:8763/ "注册中心")
 #### 客户端实例1 ####
  - 应用名称 cloud-client
  - 端口 8081 [http://localhost:8081/](http://localhost:8081/ "客户端1")
 #### 客户端实例2 ####
  - 应用名称 cloud-client
  - 端口 8082 [http://localhost:8082/](http://localhost:8082/ "客户端2")
+#### 客户端实例3 ####
+ - 应用名称 cloud-client
+ - 端口 8083 [http://localhost:8083/](http://localhost:8083/ "客户端3")
 #### 负载均衡 ####
  - 应用名称 cloud-ribbon
  - 端口 8088 [http://localhost:8088/](http://localhost:8088/ "负载均衡")
@@ -38,3 +48,10 @@
  - 应用名称 cloud-zuul
  - 端口 8888 [http://localhost:8888/](http://localhost:8888/ "网关")
  - 网关请求用例 [http://localhost:8888/api-zuul-ribbon/cloud-ribbon/eurekaClient/clients/CLOUD-CLIENT](http://localhost:8888/api-zuul-ribbon/cloud-ribbon/eurekaClient/clients/CLOUD-CLIENT "测试用例")
+#### 多数据源项目 ####
+ - 应用名称 
+ - 端口 8080 [http://localhost:8080/](http://localhost:8080/ "多数据源")
+ #### 声明调用服务 ####
+  - 应用名称 cloud-feign
+  - 端口 8808 [http://localhost:8808/](http://localhost:8808/ "Feign")
+  - 网关请求用例 [http://localhost:8808/eurekaClient/feign](http://localhost:8808/eurekaClient/feign "调用CLOUD-CLIENT的/eurekaClient/feign接口")
