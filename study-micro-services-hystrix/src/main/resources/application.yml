@@ -1,0 +1,13 @@
+server:
+  port: 8098
+  
+Spring:
+    application:
+     name: cloud-hystrix
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

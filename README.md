@@ -7,6 +7,8 @@
 - Spring Cloud集成Eureka [https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.M3/single/spring-cloud-netflix.html](https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.M3/single/spring-cloud-netflix.html "Spring Cloud 集成 Eureka")
 - Spring Cloud集成Ribbon [https://blog.csdn.net/true1cc/article/details/81005637](https://blog.csdn.net/true1cc/article/details/81005637 "Spring Cloud 集成 Ribbon")、[https://blog.csdn.net/justlpf/article/details/80354161](https://blog.csdn.net/justlpf/article/details/80354161 "Spring Cloud 集成 Ribbon")
 - Spring Cloud集成Zuul [https://blog.csdn.net/qq_34246546/article/details/79359323](https://blog.csdn.net/qq_34246546/article/details/79359323 "Spring Cloud 集成 Zuul")
+- Spring Cloud集成Feign [https://cloud.spring.io/spring-cloud-static/spring-cloud-openfeign/2.1.0.RC2/single/spring-cloud-openfeign.html#spring-cloud-feign](https://cloud.spring.io/spring-cloud-static/spring-cloud-openfeign/2.1.0.RC2/single/spring-cloud-openfeign.html#spring-cloud-feign "Spring Cloud 集成 Feign")
+- Spring Cloud集成Hystrix [https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.RC2/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients](https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.RC2/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients "Spring Cloud集成Hystrix")
 
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
@@ -22,6 +24,7 @@
 - study-micro-services-zuul 网关服务, 服务名称为：cloud-zuul
 - study-micro-services-multi-datasources 多数据源Spring Boot 服务
 - study-micro-services-feign Feign服务,注册到cloud-server, 服务名称为：cloud-feign
+- study-micro-services-hystrix Hystrix服务,注册到cloud-server, 服务名称为：cloud-hystrix
 
 
 ## 项目请求路径 ##
@@ -51,7 +54,12 @@
 #### 多数据源项目 ####
  - 应用名称 
  - 端口 8080 [http://localhost:8080/](http://localhost:8080/ "多数据源")
- #### 声明调用服务 ####
+#### 声明调用服务 ####
   - 应用名称 cloud-feign
   - 端口 8808 [http://localhost:8808/](http://localhost:8808/ "Feign")
   - 网关请求用例 [http://localhost:8808/eurekaClient/feign](http://localhost:8808/eurekaClient/feign "调用CLOUD-CLIENT的/eurekaClient/feign接口")
+#### Hystrix服务 ####
+  - 应用名称 cloud-hystrix
+  - 端口 8098 [http://localhost:8098/](http://localhost:8098/ "Hystrix")
+  - 请求服务成功用例 [http://localhost:8098/hystrixClient/rest/success](http://localhost:8098/hystrixClient/rest/success "成功调用CLOUD-CLIENT的/eurekaClient/feign接口")
+  - 请求服务失败用例,此接口不存在 [http://localhost:8098/hystrixClient/rest/error](http://localhost:8098/hystrixClient/rest/error "失败调用CLOUD-CLIENT的/eurekaClient/someUrl接口")

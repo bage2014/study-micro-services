@@ -1,4 +1,4 @@
-package com.bage.study.micro.services.feign;
+package com.bage.study.micro.services.hystrix;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
