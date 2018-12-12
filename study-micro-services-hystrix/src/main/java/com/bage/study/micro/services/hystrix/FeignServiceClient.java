@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Service
-@FeignClient(value = "CLOUD-CLIENT",fallback = HystrixClientFallback.class)
+@FeignClient(value = "CLOUD-CLIENT"/*,fallback = HystrixClientFallback.class*/)
 public interface FeignServiceClient {
 
     @RequestMapping("/eurekaClient/feign")
