@@ -34,6 +34,7 @@
     <module>study-micro-services-eureka-server3</module>
       <module>study-micro-services-eureka-client3</module>
       <module>study-micro-services-hystrix</module>
+    <module>study-micro-services-turbine</module>
 
   </modules>
 </project>
