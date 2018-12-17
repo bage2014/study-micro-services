@@ -1,0 +1,13 @@
+server:
+  port: 8099
+  
+Spring:
+    application:
+     name: cloud-register
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
