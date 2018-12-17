@@ -3,7 +3,7 @@ server:
   
 Spring:
     application:
-     name: cloud-register
+     name: cloud-config
   
 eureka:
   instance:

@@ -9,6 +9,7 @@
 - Spring Cloud集成Zuul [https://blog.csdn.net/qq_34246546/article/details/79359323](https://blog.csdn.net/qq_34246546/article/details/79359323 "Spring Cloud 集成 Zuul")
 - Spring Cloud集成Feign [https://cloud.spring.io/spring-cloud-static/spring-cloud-openfeign/2.1.0.RC2/single/spring-cloud-openfeign.html#spring-cloud-feign](https://cloud.spring.io/spring-cloud-static/spring-cloud-openfeign/2.1.0.RC2/single/spring-cloud-openfeign.html#spring-cloud-feign "Spring Cloud 集成 Feign")
 - Spring Cloud集成Hystrix [https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.RC2/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients](https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.RC2/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients "Spring Cloud集成Hystrix")
+- Spring Cloud Config [https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.1.0.RC2/single/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.1.0.RC2/single/spring-cloud-config.html "Spring Cloud Config")
 
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖

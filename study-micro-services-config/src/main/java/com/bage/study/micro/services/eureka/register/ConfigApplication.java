@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 @SpringBootApplication
 @EnableDiscoveryClient
 @RestController
-public class RegisterApplication {
+//@EnableConfigServer
+public class ConfigApplication {
 
 	@RequestMapping("/")
     public String home(HttpServletRequest request) {
@@ -20,7 +21,7 @@ public class RegisterApplication {
     }
 
     public static void main(String[] args) {
-    	SpringApplication.run(RegisterApplication.class, args);
+    	SpringApplication.run(ConfigApplication.class, args);
     }
 
 }
