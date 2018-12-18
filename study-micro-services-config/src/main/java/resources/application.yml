@@ -8,7 +8,8 @@ Spring:
       config:
         server:
           git:
-            uri: file:///E:/workspace/IdeaProjects/study-micro-services/study-micro-services/study-micro-services-config/src/main/java/resources
+            uri: https://github.com/bage2014/study-micro-services/
+            search-paths: /**
 
 eureka:
   instance:

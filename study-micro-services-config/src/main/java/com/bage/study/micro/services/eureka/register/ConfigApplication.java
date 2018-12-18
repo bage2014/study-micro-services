@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 @EnableConfigServer
 public class ConfigApplication {
 
-	@RequestMapping("/")
+	@RequestMapping("/home")
     public String home(HttpServletRequest request) {
     	System.out.println("这是client register ");
         return "Hello register " + request.getContextPath();
