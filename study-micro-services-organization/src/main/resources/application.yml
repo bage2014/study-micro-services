@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 8084
   
 mybatis: 
   config:
@@ -7,7 +7,7 @@ mybatis:
   
 Spring:
     application:
-      name: cloud-client
+      name: cloud-organization
     h2:
       console:
         path: /h2-console   # h2 web consloe 路径
