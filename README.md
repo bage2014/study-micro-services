@@ -28,6 +28,11 @@
 - study-micro-services-hystrix Hystrix服务,注册到cloud-server, 服务名称为：cloud-hystrix
 - study-micro-services-config Config服务,注册到cloud-server, 服务名称为：cloud-config
 
+## 启动顺序 ##
+- 启动注册中心 study-micro-services-eureka
+- 启动注册中心2 study-micro-services-eureka-server2
+- 启动注册中心3 study-micro-services-eureka-server3
+- 其他项目，随机启动即可
 
 ## 项目请求路径 ##
 #### 注册中心 ####
@@ -65,7 +70,8 @@
   - 端口 8098 [http://localhost:8098/](http://localhost:8098/ "Hystrix")
   - 请求服务成功用例 [http://localhost:8098/hystrixClient/rest/success](http://localhost:8098/hystrixClient/rest/success "成功调用CLOUD-CLIENT的/eurekaClient/feign接口")
   - 请求服务失败用例,此接口不存在 [http://localhost:8098/hystrixClient/rest/error](http://localhost:8098/hystrixClient/rest/error "失败调用CLOUD-CLIENT的/eurekaClient/someUrl接口")
-  #### 配置中心 ####
+  - 请求Hystrix监控用例 [http://localhost:8098/hystrix](http://localhost:8098/hystrix "监控地址")
+#### 配置中心 ####
    - 应用名称 cloud-config
    - 端口 8099 [http://localhost:8099/](http://localhost:8099/ "配置中心")
    - 配置请求用例 [http://localhost:8099/config/dev](http://localhost:8099/config/dev "测试用例")
