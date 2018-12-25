@@ -1,13 +1,17 @@
 server:
   port: 8082
-  
-Spring:
+
+spring:
     application:
      name: cloud-client
-  
+
 eureka:
   instance:
     hostname: localhost
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    org.springframework: debug # 设置debug

@@ -5,7 +5,11 @@ eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: false # 不注册自己
+    fetchRegistry: false # 不抓取注册列表
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+
+logging:
+  level:
+    org.springframework: debug # 设置debug
