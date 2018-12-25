@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableDiscoveryClient
+//@EnableDiscoveryClient // 在 spring-cloud-dependencies的Finchley.SR2 版本中可以不用添加此注解
 @RestController
 public class Client2Application {
 

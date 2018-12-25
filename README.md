@@ -47,6 +47,9 @@
 #### 客户端实例2 ####
  - 应用名称 cloud-client
  - 端口 8082 [http://localhost:8082/](http://localhost:8082/ "客户端2")
+ - 请求客户端元信息 [http://localhost:8082/eurekaClient/services?serviceId=CLOUD-CLIENT](http://localhost:8082/eurekaClient/services?serviceId=CLOUD-CLIENT "CLOUD-CLIENT元信息")
+  
+
 #### 客户端实例3 ####
  - 应用名称 cloud-client
  - 端口 8083 [http://localhost:8083/](http://localhost:8083/ "客户端3")
