@@ -10,6 +10,7 @@
 - Spring Cloud集成Feign [https://cloud.spring.io/spring-cloud-static/spring-cloud-openfeign/2.1.0.RC2/single/spring-cloud-openfeign.html#spring-cloud-feign](https://cloud.spring.io/spring-cloud-static/spring-cloud-openfeign/2.1.0.RC2/single/spring-cloud-openfeign.html#spring-cloud-feign "Spring Cloud 集成 Feign")
 - Spring Cloud集成Hystrix [https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.RC2/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients](https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.RC2/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients "Spring Cloud集成Hystrix")
 - Spring Cloud Config [https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.1.0.RC2/single/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.1.0.RC2/single/spring-cloud-config.html "Spring Cloud Config")
+- Spring Cloud Sleuth [https://spring.io/projects/spring-cloud-sleuth#overview](https://spring.io/projects/spring-cloud-sleuth#overview "Spring Cloud Sleuth")
 
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
@@ -27,6 +28,7 @@
 - study-micro-services-feign Feign服务,注册到cloud-server, 服务名称为：cloud-feign
 - study-micro-services-hystrix Hystrix服务,注册到cloud-server, 服务名称为：cloud-hystrix
 - study-micro-services-config Config服务,注册到cloud-server, 服务名称为：cloud-config
+- study-micro-services-sleuth Sleuth服务,注册到cloud-server, 服务名称为：cloud-sleuth
 
 ## 启动顺序 ##
 - 启动注册中心 study-micro-services-eureka
@@ -48,8 +50,6 @@
  - 应用名称 cloud-client
  - 端口 8082 [http://localhost:8082/](http://localhost:8082/ "客户端2")
  - 请求客户端元信息 [http://localhost:8082/eurekaClient/services?serviceId=CLOUD-CLIENT](http://localhost:8082/eurekaClient/services?serviceId=CLOUD-CLIENT "CLOUD-CLIENT元信息")
-  
-
 #### 客户端实例3 ####
  - 应用名称 cloud-client
  - 端口 8083 [http://localhost:8083/](http://localhost:8083/ "客户端3")
@@ -78,4 +78,8 @@
    - 应用名称 cloud-config
    - 端口 8099 [http://localhost:8099/](http://localhost:8099/ "配置中心")
    - 配置请求用例 [http://localhost:8099/config/dev](http://localhost:8099/config/dev "测试用例")
+#### Sleuth应用 ####
+   - 应用名称 cloud-sleuth
+   - 端口 8909 [http://localhost:8909/](http://localhost:8909/ "Sleuth应用")
+   - Sleuth 请求 [http://localhost:8909/eurekaClient/feign](http://localhost:8909/eurekaClient/feign "测试用例")
 

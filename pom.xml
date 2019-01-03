@@ -36,6 +36,7 @@
       <module>study-micro-services-hystrix</module>
     <module>study-micro-services-turbine</module>
     <module>study-micro-services-config</module>
+    <module>study-micro-services-sleuth</module>
 
   </modules>
 </project>
