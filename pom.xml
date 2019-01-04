@@ -37,6 +37,7 @@
     <module>study-micro-services-turbine</module>
     <module>study-micro-services-config</module>
     <module>study-micro-services-sleuth</module>
+    <module>study-micro-services-gateway</module>
 
   </modules>
 </project>
