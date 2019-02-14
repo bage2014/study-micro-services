@@ -45,14 +45,14 @@
  - 端口 8763 [http://localhost:8763/](http://localhost:8763/ "注册中心")
 #### 客户端实例1 ####
  - 应用名称 cloud-client
- - 端口 8081 [http://localhost:8081/](http://localhost:8081/ "客户端1")
+ - 端口 8001 [http://localhost:8001/](http://localhost:8001/ "客户端1")
 #### 客户端实例2 ####
  - 应用名称 cloud-client
- - 端口 8082 [http://localhost:8082/](http://localhost:8082/ "客户端2")
+ - 端口 8002 [http://localhost:8002/](http://localhost:8002/ "客户端2")
  - 请求客户端元信息 [http://localhost:8082/eurekaClient/services?serviceId=CLOUD-CLIENT](http://localhost:8082/eurekaClient/services?serviceId=CLOUD-CLIENT "CLOUD-CLIENT元信息")
 #### 客户端实例3 ####
  - 应用名称 cloud-client
- - 端口 8083 [http://localhost:8083/](http://localhost:8083/ "客户端3")
+ - 端口 8003 [http://localhost:8003/](http://localhost:8003/ "客户端3")
 #### 负载均衡 ####
  - 应用名称 cloud-ribbon
  - 端口 8088 [http://localhost:8088/](http://localhost:8088/ "负载均衡")
