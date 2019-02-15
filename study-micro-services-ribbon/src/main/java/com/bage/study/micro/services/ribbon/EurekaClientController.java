@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("eurekaClient")
+@RequestMapping("/eurekaClient")
 public class EurekaClientController {
 	
 	@Autowired
@@ -36,7 +36,14 @@ public class EurekaClientController {
 		ResponseEntity<String> res = restTemplate.getForEntity(url , String.class);
 		return res.getBody();
 	}
-	
-	
+
+	@GetMapping("/not-springboot/clients/")
+	public String notboot() {
+		String url = "http://cloud-client-not-springboot/hello";
+		ResponseEntity<String> res = restTemplate.getForEntity(url , String.class);
+		return res.getBody();
+	}
+
+
 }
 

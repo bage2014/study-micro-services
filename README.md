@@ -11,6 +11,7 @@
 - Spring Cloud集成Hystrix [https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.RC2/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients](https://cloud.spring.io/spring-cloud-static/spring-cloud-netflix/2.1.0.RC2/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients "Spring Cloud集成Hystrix")
 - Spring Cloud Config [https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.1.0.RC2/single/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.1.0.RC2/single/spring-cloud-config.html "Spring Cloud Config")
 - Spring Cloud Sleuth [https://spring.io/projects/spring-cloud-sleuth#overview](https://spring.io/projects/spring-cloud-sleuth#overview "Spring Cloud Sleuth")
+- 非Spring Boot Web项目 注册节点到Eureka Server并提供服务 [https://blog.csdn.net/qq_32193151/article/details/72559783](https://blog.csdn.net/qq_32193151/article/details/72559783 "非Spring Boot Web项目 注册节点到Eureka Server并提供服务")
 
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
@@ -30,6 +31,7 @@
 - study-micro-services-config Config服务,注册到cloud-server, 服务名称为：cloud-config
 - study-micro-services-sleuth Sleuth服务,注册到cloud-server, 服务名称为：cloud-sleuth
 - study-micro-services-zuul-dynamic-routes 动态路由网关服务, 服务名称为：cloud-zuul-dynamic-routes
+- study-micro-services-client4 非Spring boot服务, 服务名称为：cloud-client-not-springboot
 
 ## 启动顺序 ##
 - 启动注册中心 study-micro-services-eureka
@@ -57,7 +59,9 @@
 #### 负载均衡 ####
  - 应用名称 cloud-ribbon
  - 端口 8088 [http://localhost:8088/](http://localhost:8088/ "负载均衡")
- - 轮询负载用例 [http://localhost:8088/eurekaClient/clients/CLOUD-CLIENT](http://localhost:8088/eurekaClient/clients/CLOUD-CLIENT "测试用例")
+ - 轮询负载用例 [http://localhost:8088/eurekaClient/clients/CLOUD-CLIENT](http://localhost:8088/eurekaClient/clients/CLOUD-CLIENT "轮询负载用例")
+ - 访问非Spring Boot Web项目用例（非Spring Boot服务context为 / ） [http://localhost:8088/eurekaClient/not-springboot/clients/](http://localhost:8088/eurekaClient/not-springboot/clients/ "访问非Spring Boot Web项目用例")
+
 #### 网关 ####
  - 应用名称 cloud-zuul
  - 端口 8888 [http://localhost:8888/](http://localhost:8888/ "网关")
@@ -88,7 +92,10 @@
  - 端口 8071 [http://localhost:8071/](http://localhost:8071/ "动态路由网关")
  - 查看所有路由 [http://localhost:8071/admin/routes](http://localhost:8071/admin/routes "查看所有路由")
  - 添加路由 [http://localhost:8071/proxyurl](http://localhost:8071/proxyurl "添加路由")
-
+#### 非Spring Boot服务 ####
+ - 应用名称 cloud-client-not-springboot
+ - 端口 8080（context为 / ） [http://localhost:8080/hello](http://localhost:8080/hello "非Spring Boot服务")
+ 
 ## 其他 ##
 导出jar到lib命令 
 

@@ -39,6 +39,7 @@
     <module>study-micro-services-sleuth</module>
     <module>study-micro-services-gateway</module>
     <module>study-micro-services-zuul-dynamic-routes</module>
+    <module>study-micro-services-eureka-client4</module>
 
   </modules>
 </project>
