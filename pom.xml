@@ -38,6 +38,7 @@
     <module>study-micro-services-config</module>
     <module>study-micro-services-sleuth</module>
     <module>study-micro-services-gateway</module>
+    <module>study-micro-services-zuul-dynamic-routes</module>
 
   </modules>
 </project>
