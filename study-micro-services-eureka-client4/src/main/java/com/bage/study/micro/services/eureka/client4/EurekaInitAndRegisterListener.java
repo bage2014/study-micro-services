@@ -30,7 +30,7 @@ public class EurekaInitAndRegisterListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         /**设置被读取配置文件名称  默认config.properties*/
             //设置被读取配置文件名称  默认config.properties
-        System.setProperty("archaius.configurationSource.defaultFileName", "config.properties");
+        System.setProperty("archaius.configurationSource.defaultFileName", "eureka-config.properties");
         /**注册*/
         registerWithEureka();
     }
