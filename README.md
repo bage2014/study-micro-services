@@ -89,4 +89,9 @@
  - 查看所有路由 [http://localhost:8071/admin/routes](http://localhost:8071/admin/routes "查看所有路由")
  - 添加路由 [http://localhost:8071/proxyurl](http://localhost:8071/proxyurl "添加路由")
 
+## 其他 ##
+导出jar到lib命令 
+
+    mvn dependency:copy-dependencies -DoutputDirectory=lib
+	
 

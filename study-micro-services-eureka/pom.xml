@@ -46,7 +46,4 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<!-- 导出jar命令 -->
-	<!-- mvn dependency:copy-dependencies -DoutputDirectory=lib -->
-
 </project>
