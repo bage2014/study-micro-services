@@ -29,6 +29,7 @@
 - study-micro-services-hystrix Hystrix服务,注册到cloud-server, 服务名称为：cloud-hystrix
 - study-micro-services-config Config服务,注册到cloud-server, 服务名称为：cloud-config
 - study-micro-services-sleuth Sleuth服务,注册到cloud-server, 服务名称为：cloud-sleuth
+- study-micro-services-zuul-dynamic-routes 动态路由网关服务, 服务名称为：cloud-zuul-dynamic-routes
 
 ## 启动顺序 ##
 - 启动注册中心 study-micro-services-eureka
@@ -82,4 +83,10 @@
    - 应用名称 cloud-sleuth
    - 端口 8909 [http://localhost:8909/](http://localhost:8909/ "Sleuth应用")
    - Sleuth 请求 [http://localhost:8909/eurekaClient/feign](http://localhost:8909/eurekaClient/feign "测试用例")
+#### 动态路由网关 ####
+ - 应用名称 cloud-zuul-dynamic-routes
+ - 端口 8071 [http://localhost:8071/](http://localhost:8071/ "动态路由网关")
+ - 查看所有路由 [http://localhost:8071/admin/routes](http://localhost:8071/admin/routes "查看所有路由")
+ - 添加路由 [http://localhost:8071/proxyurl](http://localhost:8071/proxyurl "添加路由")
+
 
