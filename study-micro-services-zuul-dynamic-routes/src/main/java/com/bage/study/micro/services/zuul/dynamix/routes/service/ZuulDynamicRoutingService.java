@@ -41,7 +41,7 @@ public class ZuulDynamicRoutingService {
 	}
 	
 	/**
-	 * Load all routes from redis cache to restore the existing routes while restarting the zuul server
+	 * Load all routes from redis cache to restore the existing routes while restarting the ribbon server
 	 */
 	@PostConstruct
 	public void initialize() {
@@ -53,7 +53,7 @@ public class ZuulDynamicRoutingService {
 			}
 			zuulHandlerMapping.setDirty(true);
 		} catch (Exception e) {
-			logger.error("Exception in loading any previous route while restarting zuul routes.", e);
+			logger.error("Exception in loading any previous route while restarting ribbon routes.", e);
 	    }
 	}
 
@@ -81,7 +81,7 @@ public class ZuulDynamicRoutingService {
 		dynamicRoute.setRequestURIUniqueKey(requestURIUniqueKey);
 		if (zuulProperties.getRoutes().containsKey(requestURIUniqueKey)) {
 			ZuulRoute zuulRoute = zuulProperties.getRoutes().remove(requestURIUniqueKey);
-			logger.debug("removed the zuul route {}", zuulRoute);
+			logger.debug("removed the ribbon route {}", zuulRoute);
 			//Removal from redis will be done from unique key. No need for other params
 			removeFromCache(dynamicRoute);
 			zuulHandlerMapping.setDirty(true);

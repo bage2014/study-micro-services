@@ -14,7 +14,7 @@ zuul:
 
 Spring:
   application:
-    name: cloud-zuul-dynamic-routes
+    name: cloud-ribbon-dynamic-routes
 
 eureka:
   instance:

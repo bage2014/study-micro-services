@@ -1,4 +1,4 @@
-package com.bage.study.micro.services.eureka.client1;
+package com.bage.study.micro.services.eureka.client5;
 
 import java.util.List;
 

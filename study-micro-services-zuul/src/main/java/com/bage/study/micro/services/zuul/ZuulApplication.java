@@ -1,5 +1,6 @@
-package com.bage.study.micro.services.ribbon;
+package com.bage.study.micro.services.zuul;
 
+import com.bage.study.micro.services.zuul.filters.PreRequestLogFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;

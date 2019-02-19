@@ -3,7 +3,7 @@ server:
   
 Spring:
     application:
-     name: cloud-zuul
+     name: cloud-ribbon
 
 zuul:
   routes:
@@ -19,7 +19,7 @@ zuul:
     serviceId: cloud-client5
    cloud-client6:
     path: /cloud-client6/**
-    serviceId: cloud-client6
+    url: http://localhost:8006/ # 也可以指定为url
 
 eureka:
   instance:

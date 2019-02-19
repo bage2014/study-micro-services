@@ -2,6 +2,8 @@ package com.bage.study.micro.services.zuul.dynamix.routes.controller;
 
 import com.bage.study.micro.services.zuul.dynamix.routes.model.DeleteRouteRequest;
 import com.bage.study.micro.services.zuul.dynamix.routes.model.DynamicRoute;
+import com.bage.study.micro.services.zuul.dynamix.routes.model.DynamicRouteResponse;
+import com.bage.study.micro.services.zuul.dynamix.routes.service.ZuulDynamicRoutingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bage.study.micro.services.zuul.dynamix.routes.model.DynamicRouteResponse;
-import com.bage.study.micro.services.zuul.dynamix.routes.service.ZuulDynamicRoutingService;
-
 import java.util.Map;
 
 @RestController
@@ -24,10 +23,11 @@ public class DynamicRouteController {
 	private static final Logger logger = LoggerFactory.getLogger(DynamicRouteController.class);
 	
 	@Autowired
-	ZuulDynamicRoutingService zuulDynamicRoutingService;
+    ZuulDynamicRoutingService zuulDynamicRoutingService;
 
 	@RequestMapping(value = "/proxyurl", method = RequestMethod.POST)
-	public @ResponseBody DynamicRouteResponse getProxyURL(@RequestBody DynamicRoute dynamicRoute) {
+	public @ResponseBody
+    DynamicRouteResponse getProxyURL(@RequestBody DynamicRoute dynamicRoute) {
 		logger.debug("request received to add {}", dynamicRoute);
 		DynamicRouteResponse dynamicRouteResponse = zuulDynamicRoutingService.addDynamicRoute(dynamicRoute);
 		logger.debug("response sent {}", dynamicRouteResponse);
