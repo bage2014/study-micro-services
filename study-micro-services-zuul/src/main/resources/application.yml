@@ -14,6 +14,13 @@ zuul:
     path: /cloud-feign/**
     serviceId: cloud-feign
 
+   cloud-client5:
+    path: /cloud-client5/**
+    serviceId: cloud-client5
+   cloud-client6:
+    path: /cloud-client6/**
+    serviceId: cloud-client6
+
 eureka:
   instance:
     hostname: localhost

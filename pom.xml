@@ -41,6 +41,7 @@
     <module>study-micro-services-zuul-dynamic-routes</module>
     <module>study-micro-services-eureka-client4</module>
       <module>study-micro-services-distribute-transaction</module>
-
+    <module>study-micro-services-eureka-client5</module>
+    <module>study-micro-services-eureka-client6</module>
   </modules>
 </project>

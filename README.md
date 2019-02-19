@@ -66,6 +66,8 @@
  - 应用名称 cloud-zuul
  - 端口 8888 [http://localhost:8888/](http://localhost:8888/ "网关")
  - 网关请求用例 [http://localhost:8888/api-zuul-ribbon/cloud-ribbon/eurekaClient/clients/CLOUD-CLIENT](http://localhost:8888/api-zuul-ribbon/cloud-ribbon/eurekaClient/clients/CLOUD-CLIENT "测试用例")
+ - 网关路由到client5 [http://localhost:8888/cloud-client5/](http://localhost:8888/cloud-client5/ "网关路由到client5")
+
 #### 多数据源项目 ####
  - 应用名称 
  - 端口 8080 [http://localhost:8080/](http://localhost:8080/ "多数据源")
@@ -92,10 +94,16 @@
  - 端口 8071 [http://localhost:8071/](http://localhost:8071/ "动态路由网关")
  - 查看所有路由 [http://localhost:8071/admin/routes](http://localhost:8071/admin/routes "查看所有路由")
  - 添加路由 [http://localhost:8071/proxyurl](http://localhost:8071/proxyurl "添加路由")
-#### 非Spring Boot服务 ####
+#### 客户端实例4（非Spring Boot服务） ####
  - 应用名称 cloud-client-not-springboot
  - 端口 8080（context为 / ） [http://localhost:8080/hello](http://localhost:8080/hello "非Spring Boot服务")
- 
+#### 客户端实例5 ####
+ - 应用名称 cloud-client5
+ - 端口 8005 [http://localhost:8005/](http://localhost:8005/ "客户端5")
+#### 客户端实例6 ####
+ - 应用名称 cloud-client6
+ - 端口 8006 [http://localhost:8006/](http://localhost:8006/ "客户端6")
+   
 ## 其他 ##
 导出jar到lib命令 
 

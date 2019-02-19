@@ -18,7 +18,7 @@ public class PreRequestLogFilter extends ZuulFilter  {
 	public Object run() throws ZuulException {
 		RequestContext context = RequestContext.getCurrentContext();
 		HttpServletRequest request = context.getRequest();
-		logger.info(String.format("send %s request to %s", request.getMethod(),request.getRequestURL().toString()));
+		logger.info(String.format("bage---send %s request to %s", request.getMethod(),request.getRequestURL().toString()));
 		return null;
 	}
 
