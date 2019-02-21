@@ -6,6 +6,7 @@ Spring:
      name: cloud-ribbon
 
 zuul:
+  ignored-services: ignored-service          # 需要忽视的服务(配置后将不会被路由)
   routes:
    cloud-ribbon:
     path: /cloud-ribbon/**

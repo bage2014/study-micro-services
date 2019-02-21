@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -14,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class Client6Application {
 
     @RequestMapping("/")
-    public String home(HttpServletRequest request) {
-    	System.out.println("这是client 6 ");
-        return "Hello 6 " + request.getContextPath();
+    public String home(@RequestParam("param") String param) {
+    	System.out.println("这是client 6 " + param);
+        return "Hello 6 " + param;
     }
 
     public static void main(String[] args) {
