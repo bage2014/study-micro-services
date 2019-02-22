@@ -93,8 +93,14 @@
 #### 动态路由网关 ####
  - 应用名称 cloud-zuul-dynamic-routes
  - 端口 8071 [http://localhost:8071/](http://localhost:8071/ "动态路由网关")
- - 查看所有路由 [http://localhost:8071/admin/routes](http://localhost:8071/admin/routes "查看所有路由")
- - 添加路由 [http://localhost:8071/proxyurl](http://localhost:8071/proxyurl "添加路由")
+ - 不存在路由client7 [http://localhost:8071/client7/](http://localhost:8071/client7/ "不存在路由client7")
+ - 存在路由client5 [http://localhost:8071/client5/](http://localhost:8071/client5/ "存在路由client5")
+ - 增加路由client7 [http://localhost:8071/route/insert/](http://localhost:8071/route/insert/ "增加路由client7")
+ - 刷新路由(后30s生效) [http://localhost:8071/client7/](http://localhost:8071/client7/ "刷新路由(后30s生效)")
+ - 查询所有路由 [http://localhost:8071/route/query/all](http://localhost:8071/route/query/all "查询所有路由")
+ - 再次请求之前不存在路由client7，此时已经存在 [http://localhost:8071/client7/](http://localhost:8071/client7/ "再次请求之前不存在路由client7，此时已经存在")
+ - 删除路由(刷新后30s生效) [http://localhost:8071/route/delete/10086](http://localhost:8071/route/delete/10086 "删除路由(刷新后30s生效)")
+ - 再次请求路由client7，发现已经不存在 [http://localhost:8071/client7/](http://localhost:8071/client7/ "再次请求路由client7，发现已经不存在")
 #### 客户端实例4（非Spring Boot服务） ####
  - 应用名称 cloud-client-not-springboot
  - 端口 8080（context为 / ） [http://localhost:8080/hello](http://localhost:8080/hello "非Spring Boot服务")
