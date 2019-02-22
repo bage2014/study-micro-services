@@ -1,6 +1,6 @@
 package com.bage.study.micro.services.zuul.dynamix.routes;
 
-import com.bage.study.micro.services.zuul.dynamix.routes.route.RouteService;
+import com.bage.study.micro.services.zuul.dynamix.routes.service.RouteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.zuul.filters.RefreshableRouteLocator;
 import org.springframework.cloud.netflix.zuul.filters.Route;
@@ -17,7 +17,7 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
     private ZuulProperties zuulProperties;
 
     @Autowired
-    private RouteService routeService;
+    private RouteServiceImpl routeService;
 
     public CustomRouteLocator(String servletPath, ZuulProperties properties) {
         super(servletPath, properties);
@@ -32,34 +32,31 @@ public class CustomRouteLocator extends SimpleRouteLocator implements Refreshabl
     @Override
     protected Map<String, ZuulProperties.ZuulRoute> locateRoutes() {
         Map<String, ZuulProperties.ZuulRoute> routesMap = new LinkedHashMap();
+
+        zuulProperties.getRoutes().clear(); // 先清空
+
         routesMap.putAll(super.locateRoutes());
+
         routesMap.putAll(locateRoutesFromDb());
 
-        zuulProperties.getRoutes().putAll(routesMap);
+        zuulProperties.getRoutes().putAll(routesMap); //  放入配置的路由
 
-        System.out.println("routesMap::" + routesMap);
         return routesMap;
     }
 
     private Map<? extends String, ? extends ZuulProperties.ZuulRoute> locateRoutesFromDb() {
-        List<com.bage.study.micro.services.zuul.dynamix.routes.domain.Route> list = routeService.queryAll();
-        if(list.isEmpty()){
-            routeService.init();
-            list = routeService.queryAll();
-        }
-
-        Map<String, ZuulProperties.ZuulRoute> routesMap = new LinkedHashMap();
+        List<com.bage.study.micro.services.zuul.dynamix.routes.domain.Route> list = routeService.queryAllFromCache();
+             Map<String, ZuulProperties.ZuulRoute> routesMap = new LinkedHashMap();
         for (int i = 0; i < list.size(); i++) {
-            // String id, String path, String serviceId, String url, boolean stripPrefix, Boolean retryable, Set<String> sensitiveHeaders
             com.bage.study.micro.services.zuul.dynamix.routes.domain.Route item = list.get(i);
-            routesMap.put(item.getId(),new ZuulProperties.ZuulRoute(
+            routesMap.put(item.getPathPattern(),new ZuulProperties.ZuulRoute(
                     item.getId(),
-                    item.getPath(),
+                    item.getPathPattern(),
                     item.getServiceId(),
                     item.getUrl(),
                     item.isStripPrefix(),
-                    item.isRetryable(),
-                    null
+                    item.getRetryable(),
+                    item.getSensitiveHeaders()
                     ));
         }
         return routesMap;

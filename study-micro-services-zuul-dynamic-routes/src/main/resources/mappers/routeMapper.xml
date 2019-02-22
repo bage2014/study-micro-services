@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+       Copyright 2015-2016 the original author or authors.
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bage.study.micro.services.zuul.dynamix.routes.dao.RouteMapper">
+
+    <insert id="insert">
+        INSERT INTO tb_route (
+          <include refid="field_insert"/>
+        )
+        VALUES
+        (
+          <include refid="field_insert_values"/>
+        )
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM
+            tb_route
+          WHERE id = #{id}
+    </delete>
+
+    <update id="update">
+        UPDATE tb_route
+            SET <include refid="field_update" />
+          WHERE id = #{id}
+    </update>
+
+    <select id="select">
+        SELECT
+            <include refid="field_select"/>
+          FROM
+        tb_route
+          WHERE id = #{id}
+    </select>
+
+    <select id="queryAll" resultType="Route">
+        SELECT
+            <include refid="field_select"/>
+          FROM
+            tb_route
+    </select>
+
+    <sql id="field_update">
+        id=#{id},
+        path_pattern=#{pathPattern},
+        service_id=#{serviceId},
+        url=#{url},
+        strip_prefix=#{stripPrefix},
+        retryable=#{retryable},
+        sensitive_headers=#{sensitiveHeaders},
+        custom_sensitive_headers=#{customSensitiveHeaders}
+    </sql>
+
+    <sql id="field_select">
+        id,
+        path_pattern as pathPattern,
+        service_id as serviceId,
+        url,
+        strip_prefix as stripPrefix,
+        retryable,
+        sensitive_headers as sensitiveHeaders,
+        custom_sensitive_headers as customSensitiveHeaders
+    </sql>
+    <sql id="field_insert">
+        id,
+        path_pattern,
+        service_id,
+        url,
+        strip_prefix,
+        retryable,
+        sensitive_headers,
+        custom_sensitive_headers
+    </sql>
+    <sql id="field_insert_values">
+        #{id},
+        #{pathPattern},
+        #{serviceId},
+        #{url},
+        #{stripPrefix},
+        #{retryable},
+        #{sensitiveHeaders},
+        #{customSensitiveHeaders}
+    </sql>
+
+</mapper>

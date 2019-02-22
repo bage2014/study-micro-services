@@ -5,10 +5,34 @@ server:
 Spring:
   application:
     name: cloud-dynamic-routes
+  h2:
+    console:
+      path: /h2-console   # h2 web consloe 路径
+      enabled: true       # 开启 h2 web consloe，默认为 false
+      settings:
+        web-allow-others: true    #允许远程访问 h2 web consloe
+  datasource:
+    username: sa
+    url: jdbc:h2:~/test;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name:  org.h2.Driver
+    schema: classpath:schema.sql
+    data: classpath:data.sql
 
+  cloud:
+    refresh:
+      refreshable: none
 eureka:
   instance:
     hostname: localhost
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+
+mybatis:
+  # Eclipse 配置
+  #  config:
+  #    location: mybatis-config.xml
+
+  # Idea 配置
+  config-location: classpath:mybatis-config.xml
