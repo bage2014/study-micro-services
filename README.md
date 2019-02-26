@@ -12,6 +12,7 @@
 - Spring Cloud Config [https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.1.0.RC2/single/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-static/spring-cloud-config/2.1.0.RC2/single/spring-cloud-config.html "Spring Cloud Config")
 - Spring Cloud Sleuth [https://spring.io/projects/spring-cloud-sleuth#overview](https://spring.io/projects/spring-cloud-sleuth#overview "Spring Cloud Sleuth")
 - 非Spring Boot Web项目 注册节点到Eureka Server并提供服务 [https://blog.csdn.net/qq_32193151/article/details/72559783](https://blog.csdn.net/qq_32193151/article/details/72559783 "非Spring Boot Web项目 注册节点到Eureka Server并提供服务")
+- Spring Cloud Gateway [https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html](https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html)
 
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
@@ -32,6 +33,7 @@
 - study-micro-services-sleuth Sleuth服务,注册到cloud-server, 服务名称为：cloud-sleuth
 - study-micro-services-zuul-dynamic-routes 动态路由网关服务, 服务名称为：cloud-zuul-dynamic-routes
 - study-micro-services-client4 非Spring boot服务, 服务名称为：cloud-client-not-springboot
+- study-micro-services-gateway Spring网关服务, 服务名称为：cloud-client-gateway
 
 ## 启动顺序 ##
 - 启动注册中心 study-micro-services-eureka
@@ -112,7 +114,12 @@
 #### 客户端实例6 ####
  - 应用名称 cloud-client6
  - 端口 8006 [http://localhost:8006/](http://localhost:8006/ "客户端6")
-   
+ 
+#### Spring Gateway网关 ####
+ - 应用名称 cloud-gateway
+ - 端口 8888 [http://localhost:8888/](http://localhost:8888/)
+ - 请求client5（clien5中需要client5的mapping） [http://localhost:8888/client5](http://localhost:8888/client5)
+  
 ## 其他 ##
 导出jar到lib命令 
 

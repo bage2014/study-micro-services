@@ -20,6 +20,12 @@ public class Client5Application {
         return "Hello 5 " + request.getContextPath();
     }
 
+    @RequestMapping("/client5")
+    public String hoclient5me(HttpServletRequest request) {
+    	System.out.println("这是client 5 ");
+        return "client5 5 " + request.getContextPath();
+    }
+
 
     @GetMapping("/timeoutRequest")
     public String timeoutRequest() {

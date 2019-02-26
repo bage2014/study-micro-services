@@ -1,10 +1,12 @@
 package com.bage.study.micro.services.zuul;
 
 import com.bage.study.micro.services.zuul.filters.PreRequestLogFilter;
+import com.netflix.zuul.http.ZuulServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.netflix.zuul.filters.route.SimpleHostRoutingFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +24,8 @@ public class ZuulApplication {
 	
     @RequestMapping("/")
     public String home() {
+        SimpleHostRoutingFilter s;
+        ZuulServlet ff;
         return "Hello world";
     }
 
