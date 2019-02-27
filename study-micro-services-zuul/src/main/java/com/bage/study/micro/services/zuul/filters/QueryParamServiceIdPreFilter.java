@@ -26,14 +26,14 @@ public class QueryParamServiceIdPreFilter extends ZuulFilter {
 	@Override
 	public boolean shouldFilter() {
 		RequestContext ctx = getCurrentContext();
-		return ctx.getRequest().getParameter("service") != null;
+		return ctx.getRequest().getParameter("dao") != null;
 	}
 
 	public Object run() {
 		RequestContext ctx = getCurrentContext();
 		HttpServletRequest request = ctx.getRequest();
 		// put the serviceId in `RequestContext`
-		ctx.put("serviceId", request.getParameter("service"));
+		ctx.put("serviceId", request.getParameter("dao"));
 		return null;
 	}
 }

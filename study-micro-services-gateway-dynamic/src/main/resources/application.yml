@@ -1,0 +1,22 @@
+
+server:
+  port: 8888
+
+Spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      routes:
+      - id: cloud-client5
+        uri: lb://cloud-client5
+        predicates:
+        - Path=/client5/**
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
