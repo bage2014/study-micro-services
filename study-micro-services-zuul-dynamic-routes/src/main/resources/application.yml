@@ -1,8 +1,10 @@
 server:
   port: ${appPort:8071}
+  tomcat:
+    max-threads: 1000
+    max-connections: 1000
 
-
-Spring:
+spring:
   application:
     name: cloud-dynamic-routes
   h2:
@@ -36,3 +38,18 @@ mybatis:
 
   # Idea 配置
   config-location: classpath:mybatis-config.xml
+
+
+zuul:
+  host:
+    connect-timeout-millis: 4000  # HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 4000   # socket超时
+
+  semaphore:
+    max-semaphores: 1000
+
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
+
+
