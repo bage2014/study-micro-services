@@ -9,14 +9,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @SpringBootApplication
 @EnableDiscoveryClient
 @RestController
 public class Client6Application {
 
+
+    AtomicInteger counter = new AtomicInteger();
+
     @RequestMapping("/")
-    public String home(@RequestParam("param") String param) {
-    	System.out.println("这是client 6 " + param);
+    public String home(@RequestParam(value = "param",required = false) String param) {
+    	System.out.println(counter.incrementAndGet() + ":这是client 6 " + param);
         return "Hello 6 " + param;
     }
 

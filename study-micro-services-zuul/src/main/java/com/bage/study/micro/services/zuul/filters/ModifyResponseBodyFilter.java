@@ -3,6 +3,7 @@ package com.bage.study.micro.services.zuul.filters;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.StreamUtils;
@@ -18,6 +19,9 @@ import static org.springframework.util.ReflectionUtils.rethrowRuntimeException;
  */
 @Component
 public class ModifyResponseBodyFilter extends ZuulFilter {
+
+	AtomicInteger counter = new AtomicInteger();
+
 	public String filterType() {
 		return "post";
 	}
@@ -33,6 +37,7 @@ public class ModifyResponseBodyFilter extends ZuulFilter {
 
 	public Object run() {
 		try {
+			System.out.println(counter.incrementAndGet() + ":ModifyResponseBodyFilter ");
 			RequestContext context = getCurrentContext();
 			InputStream stream = context.getResponseDataStream();
 			String body = StreamUtils.copyToString(stream, Charset.forName("UTF-8"));

@@ -1,6 +1,6 @@
 server:
   port: 8006
-  
+
 Spring:
     application:
      name: cloud-client6

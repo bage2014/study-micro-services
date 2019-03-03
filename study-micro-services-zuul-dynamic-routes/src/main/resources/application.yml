@@ -1,8 +1,8 @@
 server:
   port: ${appPort:8071}
-  tomcat:
-    max-threads: 1000
-    max-connections: 1000
+#  tomcat:
+#    max-threads: 500
+#    max-connections: 500
 
 spring:
   application:
@@ -42,14 +42,14 @@ mybatis:
 
 zuul:
   host:
-    connect-timeout-millis: 4000  # HTTP连接超时要比Hystrix的大
-    socket-timeout-millis: 4000   # socket超时
+    connect-timeout-millis: 6000  # HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 6000   # socket超时
 
   semaphore:
-    max-semaphores: 1000
+    max-semaphores: 1000 # could not acquire a semaphore for execution
 
 ribbon:
-  ReadTimeout: 3000
-  ConnectTimeout: 3000
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
 
 
