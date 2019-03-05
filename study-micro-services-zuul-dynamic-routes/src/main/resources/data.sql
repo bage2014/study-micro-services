@@ -12,8 +12,8 @@ INSERT INTO tb_route (
 VALUES
 	(
 		'0',
-		'/client5/**',
-		'cloud-client5',
+		'/client6/**',
+		'cloud-client6',
 		'',
 		'true',
 		'true',

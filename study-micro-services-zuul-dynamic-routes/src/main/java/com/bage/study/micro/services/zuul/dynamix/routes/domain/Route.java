@@ -5,22 +5,22 @@ import java.util.Set;
 
 public class Route {
 
-    private String id; // The ID of the service (the same as its map key by default).
+    private String id; // The ID of the dao (the same as its map key by default).
 
-    private String pathPattern; // The path (pattern) for the service, e.g. /foo/**.
+    private String pathPattern; // The path (pattern) for the dao, e.g. /foo/**.
 
-    private String serviceId; // The service ID (if any) to map to this service. You can specify a physical URL or a service, but not both.
+    private String serviceId; // The dao ID (if any) to map to this dao. You can specify a physical URL or a dao, but not both.
 
-    private String url; // A full physical URL to map to the service. An alternative is to use a service ID and service discovery to find the physical address.
+    private String url; // A full physical URL to map to the dao. An alternative is to use a dao ID and dao discovery to find the physical address.
 
-    private boolean stripPrefix = true; // Flag to determine whether the prefix for this service (the path, minus pattern  patcher) should be stripped before forwarding.
+    private boolean stripPrefix = true; // Flag to determine whether the prefix for this dao (the path, minus pattern  patcher) should be stripped before forwarding.
 
-    private Boolean retryable; // Flag to indicate that this service should be retryable (if supported). Generally retry requires a service ID and ribbon.
+    private Boolean retryable; // Flag to indicate that this dao should be retryable (if supported). Generally retry requires a dao ID and ribbon.
 
     /**
      * List of sensitive headers that are not passed to downstream requests. Defaults
      * to a "safe" set of headers that commonly contain user credentials. It's OK to
-     * remove those from the list if the downstream service is part of the same system
+     * remove those from the list if the downstream dao is part of the same system
      * as the proxy, so they are sharing authentication data. If using a physical URL
      * outside your own domain, then generally it would be a bad idea to leak user
      * credentials.

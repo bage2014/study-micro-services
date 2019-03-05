@@ -9,14 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @SpringBootApplication
 @EnableDiscoveryClient
 @RestController
 public class Client5Application {
 
+    AtomicInteger counter = new AtomicInteger();
+
     @RequestMapping("/")
     public String home(HttpServletRequest request) {
-    	System.out.println("这是client 5 ");
+    	System.out.println(counter.incrementAndGet() + "：这是client 5 ");
         return "Hello 5 " + request.getContextPath();
     }
 

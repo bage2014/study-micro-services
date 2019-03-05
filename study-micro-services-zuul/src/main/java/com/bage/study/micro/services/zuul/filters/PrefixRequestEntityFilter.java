@@ -32,7 +32,7 @@ public class PrefixRequestEntityFilter extends ZuulFilter {
 
 	public boolean shouldFilter() {
 		RequestContext context = getCurrentContext();
-		return context.getRequest().getParameter("service") != null;
+		return context.getRequest().getParameter("dao") != null;
 	}
 
 	public Object run() {

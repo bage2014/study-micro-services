@@ -1,6 +1,6 @@
 server:
   port: 8005
-  
+
 Spring:
     application:
      name: cloud-client5
