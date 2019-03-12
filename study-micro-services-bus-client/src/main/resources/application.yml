@@ -1,9 +1,9 @@
 server:
-  port: 8801
+  port: 8802
   
 Spring:
   application:
-    name: cloud-bus
+    name: cloud-bus-client
   rabbitmq:
     host: 117.50.1.227
     port: 15672

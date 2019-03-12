@@ -9,9 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>study-micro-services-bus</artifactId>
+    <artifactId>study-micro-services-bus-client</artifactId>
 
-    <name>study-micro-services-bus</name>
+    <name>study-micro-services-bus-client</name>
+    <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
     <properties>
@@ -31,7 +32,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -66,4 +67,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
 </project>

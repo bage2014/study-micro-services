@@ -15,7 +15,7 @@
 - Spring Cloud Gateway [https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html](https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html)
 - Spring Cloud Gateway运行时动态配置网关 [https://my.oschina.net/tongyufu/blog/1844573](https://my.oschina.net/tongyufu/blog/1844573)
 - Spring Cloud Bus [https://cloud.spring.io/spring-cloud-bus/spring-cloud-bus.html](https://cloud.spring.io/spring-cloud-bus/spring-cloud-bus.html)、[https://spring.io/projects/spring-cloud-bus#overview](https://spring.io/projects/spring-cloud-bus#overview)
-
+- SpringCloud之消息总线Spring Cloud Bus实例 [https://blog.csdn.net/smartdt/article/details/79073765](https://blog.csdn.net/smartdt/article/details/79073765)
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
 - study-micro-services-organization 组织机构服务
@@ -38,6 +38,7 @@
 - study-micro-services-gateway Spring网关服务, 服务名称为：cloud-gateway
 - study-micro-services-gateway-dynamic Spring 动态路由网关服务, 服务名称为：cloud-gateway
 - study-micro-services-bus Spring Cloud Bus 服务， 服务名称为：cloud-bus
+- study-micro-services-bus-client Spring Cloud Bus 客户端 服务， 服务名称为：cloud-bus-client
 
 ## 启动顺序 ##
 - 启动注册中心 study-micro-services-eureka
@@ -141,6 +142,10 @@
 ####  Spring Cloud Bus ####
 - 应用名称 cloud-bus
  - 端口 8801 [http://localhost:8801/](http://localhost:8801/)
+ 
+####  Spring Cloud Bus Client ####
+- 应用名称 cloud-bus-client
+ - 端口 8802 [http://localhost:8802/](http://localhost:8802/)
 
 ## 其他 ##
 导出jar到lib命令 

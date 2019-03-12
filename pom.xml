@@ -45,6 +45,7 @@
     <module>study-micro-services-eureka-client6</module>
     <module>study-micro-services-gateway-dynamic</module>
       <module>study-micro-services-bus</module>
+      <module>study-micro-services-bus-client</module>
 
   </modules>
 </project>

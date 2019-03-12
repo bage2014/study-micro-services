@@ -1,6 +1,5 @@
-package com.bage.study.micro.services.bus;
+package com.bage.study.micro.services.bus.client;
 
-import com.rabbitmq.client.AMQP;
 import org.springframework.amqp.core.Queue;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -14,20 +13,21 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 @RestController
 @EnableDiscoveryClient
-public class BusApplication {
+public class BusClientApplication {
 
   @RequestMapping("/")
   public String home() {
-    return "Bus,Hello World";
+    return "Bus Client,Hello World";
   }
+
 
   @Bean
   public Queue helloQueue() {
     return new Queue("hello");
   }
 
-    public static void main(String[] args) {
-    SpringApplication.run(BusApplication.class, args);
+  public static void main(String[] args) {
+    SpringApplication.run(BusClientApplication.class, args);
   }
 
 }
