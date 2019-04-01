@@ -153,3 +153,9 @@
     mvn dependency:copy-dependencies -DoutputDirectory=lib
 	
 
+## eureka原理 ##
+- 深入理解Eureka - Eureka架构综述 [http://www.majunwei.com/view/201808130819216747.html](http://www.majunwei.com/view/201808130819216747.html)
+- 服务注册中心Eureka vs Zookeeper vs Consul [https://www.cnblogs.com/daniels/p/10269140.html](https://www.cnblogs.com/daniels/p/10269140.html)
+- zuul入门（1）zuul 的概念和原理 [https://www.cnblogs.com/lexiaofei/p/7080257.html](https://www.cnblogs.com/lexiaofei/p/7080257.html)
+
+
