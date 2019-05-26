@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServletRequest;
 @EnableDiscoveryClient
 @RestController
 @EnableConfigServer
-public class ConfigApplication {
+public class ConfigServerApplication {
 
 	@RequestMapping("/home")
     public String home(HttpServletRequest request) {
-    	System.out.println("这是client register ");
-        return "Hello register " + request.getContextPath();
+    	System.out.println("这是client config ");
+        return "Hello config " + request.getContextPath();
     }
 
     public static void main(String[] args) {
-    	SpringApplication.run(ConfigApplication.class, args);
+    	SpringApplication.run(ConfigServerApplication.class, args);
     }
 
 }

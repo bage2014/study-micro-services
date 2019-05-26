@@ -1,0 +1,21 @@
+server:
+  port: 8099
+  
+Spring:
+    application:
+     name: cloud-config
+    cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/bage2014/study-micro-services/
+            search-paths: /**
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+

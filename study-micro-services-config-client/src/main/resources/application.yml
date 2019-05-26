@@ -1,9 +1,9 @@
 server:
-  port: 8099
+  port: 8909
   
 Spring:
     application:
-     name: cloud-config
+     name: cloud-config-client
     cloud:
       config:
         server:
