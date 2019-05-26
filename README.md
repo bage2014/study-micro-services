@@ -14,7 +14,8 @@
 - 非Spring Boot Web项目 注册节点到Eureka Server并提供服务 [https://blog.csdn.net/qq_32193151/article/details/72559783](https://blog.csdn.net/qq_32193151/article/details/72559783 "非Spring Boot Web项目 注册节点到Eureka Server并提供服务")
 - Spring Cloud Gateway [https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html](https://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html)
 - Spring Cloud Gateway运行时动态配置网关 [https://my.oschina.net/tongyufu/blog/1844573](https://my.oschina.net/tongyufu/blog/1844573)
-
+- Spring Cloud Bus [https://cloud.spring.io/spring-cloud-bus/spring-cloud-bus.html](https://cloud.spring.io/spring-cloud-bus/spring-cloud-bus.html)、[https://spring.io/projects/spring-cloud-bus#overview](https://spring.io/projects/spring-cloud-bus#overview)
+- SpringCloud之消息总线Spring Cloud Bus实例 [https://blog.csdn.net/smartdt/article/details/79073765](https://blog.csdn.net/smartdt/article/details/79073765)
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
 - study-micro-services-organization 组织机构服务
@@ -36,6 +37,8 @@
 - study-micro-services-client4 非Spring boot服务, 服务名称为：cloud-client-not-springboot
 - study-micro-services-gateway Spring网关服务, 服务名称为：cloud-gateway
 - study-micro-services-gateway-dynamic Spring 动态路由网关服务, 服务名称为：cloud-gateway
+- study-micro-services-bus Spring Cloud Bus 服务， 服务名称为：cloud-bus
+- study-micro-services-bus-client Spring Cloud Bus 客户端 服务， 服务名称为：cloud-bus-client
 
 ## 启动顺序 ##
 - 启动注册中心 study-micro-services-eureka
@@ -96,15 +99,21 @@
    - Sleuth 请求 [http://localhost:8909/eurekaClient/feign](http://localhost:8909/eurekaClient/feign "测试用例")
 #### 动态路由网关 ####
  - 应用名称 cloud-zuul-dynamic-routes
- - 端口 8071 [http://localhost:8071/](http://localhost:8071/ "动态路由网关")
- - 不存在路由client7 [http://localhost:8071/client7/](http://localhost:8071/client7/ "不存在路由client7")
- - 存在路由client5 [http://localhost:8071/client5/](http://localhost:8071/client5/ "存在路由client5")
- - 增加路由client7 [http://localhost:8071/route/insert/](http://localhost:8071/route/insert/ "增加路由client7")
- - 刷新路由(后30s生效) [http://localhost:8071/client7/](http://localhost:8071/client7/ "刷新路由(后30s生效)")
- - 查询所有路由 [http://localhost:8071/route/query/all](http://localhost:8071/route/query/all "查询所有路由")
- - 再次请求之前不存在路由client7，此时已经存在 [http://localhost:8071/client7/](http://localhost:8071/client7/ "再次请求之前不存在路由client7，此时已经存在")
- - 删除路由(刷新后30s生效) [http://localhost:8071/route/delete/10086](http://localhost:8071/route/delete/10086 "删除路由(刷新后30s生效)")
- - 再次请求路由client7，发现已经不存在 [http://localhost:8071/client7/](http://localhost:8071/client7/ "再次请求路由client7，发现已经不存在")
+ - 请求用例
+  - 端口 8071 [http://localhost:8071/](http://localhost:8071/ "动态路由网关")
+  - 不存在路由client7 [http://localhost:8071/client7/](http://localhost:8071/client7/ "不存在路由client7")
+  - 存在路由client5 [http://localhost:8071/client5/](http://localhost:8071/client5/ "存在路由client5")
+  - 增加路由client7 [http://localhost:8071/route/insert/](http://localhost:8071/route/insert/ "增加路由client7")
+  - 刷新路由(后30s生效) [http://localhost:8071/client7/](http://localhost:8071/client7/ "刷新路由(后30s生效)")
+  - 查询所有路由 [http://localhost:8071/route/query/all](http://localhost:8071/route/query/all "查询所有路由")
+  - 再次请求之前不存在路由client7，此时已经存在 [http://localhost:8071/client7/](http://localhost:8071/client7/ "再次请求之前不存在路由client7，此时已经存在")
+  - 删除路由(刷新后30s生效) [http://localhost:8071/route/delete/10086](http://localhost:8071/route/delete/10086 "删除路由(刷新后30s生效)")
+  - 再次请求路由client7，发现已经不存在 [http://localhost:8071/client7/](http://localhost:8071/client7/ "再次请求路由client7，发现已经不存在")
+ - 简单测试
+  - 请求client6 `ab -c 200 -n 200 -k http://172.17.17.188:8071/client6`
+
+
+
 #### 客户端实例4（非Spring Boot服务） ####
  - 应用名称 cloud-client-not-springboot
  - 端口 8080（context为 / ） [http://localhost:8080/hello](http://localhost:8080/hello "非Spring Boot服务")
@@ -130,9 +139,23 @@
  - 查询路由 [http://localhost:8888/route/query/all](http://localhost:8888/route/query/all)
  - 刷新路由 [http://localhost:8888/route/refresh](http://localhost:8888/route/refresh)
 
+####  Spring Cloud Bus ####
+- 应用名称 cloud-bus
+ - 端口 8801 [http://localhost:8801/](http://localhost:8801/)
+ 
+####  Spring Cloud Bus Client ####
+- 应用名称 cloud-bus-client
+ - 端口 8802 [http://localhost:8802/](http://localhost:8802/)
+
 ## 其他 ##
 导出jar到lib命令 
 
     mvn dependency:copy-dependencies -DoutputDirectory=lib
 	
+
+## eureka原理 ##
+- 深入理解Eureka - Eureka架构综述 [http://www.majunwei.com/view/201808130819216747.html](http://www.majunwei.com/view/201808130819216747.html)
+- 服务注册中心Eureka vs Zookeeper vs Consul [https://www.cnblogs.com/daniels/p/10269140.html](https://www.cnblogs.com/daniels/p/10269140.html)
+- zuul入门（1）zuul 的概念和原理 [https://www.cnblogs.com/lexiaofei/p/7080257.html](https://www.cnblogs.com/lexiaofei/p/7080257.html)
+
 
