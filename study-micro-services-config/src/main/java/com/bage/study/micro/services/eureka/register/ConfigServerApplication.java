@@ -17,7 +17,7 @@ public class ConfigServerApplication {
 
 	@RequestMapping("/home")
     public String home(HttpServletRequest request) {
-    	System.out.println("这是client config ");
+    	System.out.println("这是cloud config ");
         return "Hello config " + request.getContextPath();
     }
 
