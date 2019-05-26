@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MessageRestController {
 
-    @Value("${config:Hello default}")
-    private String config;
+    @Value("${name:Hello default}")
+    private String name;
     @Value("${message:Hello default}")
     private String message;
 
-    @RequestMapping("/config")
+    @RequestMapping("/name")
     String getConfig() {
-        return this.config;
+        return this.name;
     }
     @RequestMapping("/message")
     String getMessage() {
