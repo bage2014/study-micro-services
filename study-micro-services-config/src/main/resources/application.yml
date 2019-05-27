@@ -8,7 +8,7 @@ Spring:
       config:
         server:
           git:
-            uri: https://github.com/bage2014/study-micro-services/
+            uri: https://github.com/bage2014/monitor
             search-paths: /**
 
 

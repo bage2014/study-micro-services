@@ -3,5 +3,5 @@
 
 ## 参考链接 ##
 - Centralized Configuration [https://spring.io/guides/gs/centralized-configuration/](https://spring.io/guides/gs/centralized-configuration/)
-
+- Spring Cloud Config [https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html)
 
