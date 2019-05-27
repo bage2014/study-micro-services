@@ -12,10 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MessageRestController {
 
-    @Value("${Header.title:Hello default}")
-    private String name;
-    @Value("${message:Hello default}")
-    private String message;
+    @Value("${config:Hello bage}")
+    private String config;
 
     @Autowired
     private ConfigurableEnvironment environment;
@@ -33,12 +31,9 @@ public class MessageRestController {
         return String.valueOf(refresher.refresh());
     }
 
-    @RequestMapping("/name")
+    @RequestMapping("/config")
     String getConfig() {
-        return this.name;
+        return this.config;
     }
-    @RequestMapping("/message")
-    String getMessage() {
-        return this.message;
-    }
+
 }

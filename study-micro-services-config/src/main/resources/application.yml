@@ -8,7 +8,7 @@ Spring:
       config:
         server:
           git:
-            uri: https://github.com/bage2014/monitor
+            uri: https://github.com/bage2014/config-center
             search-paths: /**
 
 
