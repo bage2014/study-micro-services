@@ -16,6 +16,9 @@
 - Spring Cloud Gateway运行时动态配置网关 [https://my.oschina.net/tongyufu/blog/1844573](https://my.oschina.net/tongyufu/blog/1844573)
 - Spring Cloud Bus [https://cloud.spring.io/spring-cloud-bus/spring-cloud-bus.html](https://cloud.spring.io/spring-cloud-bus/spring-cloud-bus.html)、[https://spring.io/projects/spring-cloud-bus#overview](https://spring.io/projects/spring-cloud-bus#overview)
 - SpringCloud之消息总线Spring Cloud Bus实例 [https://blog.csdn.net/smartdt/article/details/79073765](https://blog.csdn.net/smartdt/article/details/79073765)
+- Centralized Configuration [https://spring.io/guides/gs/centralized-configuration/](https://spring.io/guides/gs/centralized-configuration/)
+- Spring Cloud Config [https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html)
+
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
 - study-micro-services-organization 组织机构服务
@@ -89,10 +92,21 @@
   - 请求服务成功用例 [http://localhost:8098/hystrixClient/rest/success](http://localhost:8098/hystrixClient/rest/success "成功调用CLOUD-CLIENT的/eurekaClient/feign接口")
   - 请求服务失败用例,此接口不存在 [http://localhost:8098/hystrixClient/rest/error](http://localhost:8098/hystrixClient/rest/error "失败调用CLOUD-CLIENT的/eurekaClient/someUrl接口")
   - 请求Hystrix监控用例 [http://localhost:8098/hystrix](http://localhost:8098/hystrix "监控地址")
-#### 配置中心 ####
+  - 
+#### 配置中心-服务端 ####
    - 应用名称 cloud-config
-   - 端口 8099 [http://localhost:8099/](http://localhost:8099/ "配置中心")
-   - 配置请求用例 [http://localhost:8099/config/dev](http://localhost:8099/config/dev "测试用例")
+   - 端口 8099 [http://localhost:8099/](http://localhost:8099/ "配置中心服务端")
+   - git仓库 [https://github.com/bage2014/config-center](https://github.com/bage2014/config-center)
+   - 
+#### 配置中心-客户端 ####
+   - 应用名称 cloud-config-client
+   - 端口 8909 [http://localhost:8909/](http://localhost:8909/ "配置中心客户端")
+   - 配置请求用例 [http://localhost:8909/config](http://localhost:8909/config "测试用例")
+
+# study-micro-services-config #
+配置中心-服务端
+
+
 #### Sleuth应用 ####
    - 应用名称 cloud-sleuth
    - 端口 8909 [http://localhost:8909/](http://localhost:8909/ "Sleuth应用")
