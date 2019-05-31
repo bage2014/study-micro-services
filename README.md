@@ -100,8 +100,9 @@
    - 
 #### 配置中心-客户端 ####
    - 应用名称 cloud-config-client
-   - 端口 8909 [http://localhost:8909/](http://localhost:8909/ "配置中心客户端")
-   - 配置请求用例 [http://localhost:8909/config](http://localhost:8909/config "测试用例")
+   - 端口 8909 [http://localhost:8909/](http://localhost:8909/)
+   - 配置请求用例 [http://localhost:8909/config](http://localhost:8909/config )
+   - 配置刷新 [http://localhost:8909/actuator/refresh](http://localhost:8909/actuator/refresh)
 
 # study-micro-services-config #
 配置中心-服务端
