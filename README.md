@@ -18,6 +18,8 @@
 - SpringCloud之消息总线Spring Cloud Bus实例 [https://blog.csdn.net/smartdt/article/details/79073765](https://blog.csdn.net/smartdt/article/details/79073765)
 - Centralized Configuration [https://spring.io/guides/gs/centralized-configuration/](https://spring.io/guides/gs/centralized-configuration/)
 - Spring Cloud Config [https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html)
+- spring-cloud-stream-binder-rabbit [https://github.com/spring-cloud/spring-cloud-stream-binder-rabbit](https://github.com/spring-cloud/spring-cloud-stream-binder-rabbit)
+- Preface [https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.RELEASE/spring-cloud-stream.html#spring-cloud-stream-reference](https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.RELEASE/spring-cloud-stream.html#spring-cloud-stream-reference)
 
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
@@ -42,6 +44,7 @@
 - study-micro-services-gateway-dynamic Spring 动态路由网关服务, 服务名称为：cloud-gateway
 - study-micro-services-bus Spring Cloud Bus 服务， 服务名称为：cloud-bus
 - study-micro-services-bus-client Spring Cloud Bus 客户端 服务， 服务名称为：cloud-bus-client
+- study-micro-services-stream Spring Cloud Stream 客户端 服务， 服务名称为：cloud-stream
 
 ## 启动顺序 ##
 - 启动注册中心 study-micro-services-eureka
@@ -160,7 +163,11 @@
  
 ####  Spring Cloud Bus Client ####
 - 应用名称 cloud-bus-client
- - 端口 8802 [http://localhost:8802/](http://localhost:8802/)
+ - 端口 8802 [http://localhost:8802/](http://localhost:8802/) 
+ 
+####  study-micro-services-stream ####
+- 应用名称 cloud-stream
+ - 端口 8803 [http://localhost:8803/](http://localhost:8803/)
 
 ## 其他 ##
 导出jar到lib命令 

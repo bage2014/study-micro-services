@@ -47,6 +47,7 @@
     <module>study-micro-services-bus</module>
     <module>study-micro-services-bus-client</module>
     <module>study-micro-services-config-client</module>
+      <module>study-micro-services-stream</module>
 
   </modules>
 </project>
