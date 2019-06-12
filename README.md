@@ -18,8 +18,7 @@
 - SpringCloud之消息总线Spring Cloud Bus实例 [https://blog.csdn.net/smartdt/article/details/79073765](https://blog.csdn.net/smartdt/article/details/79073765)
 - Centralized Configuration [https://spring.io/guides/gs/centralized-configuration/](https://spring.io/guides/gs/centralized-configuration/)
 - Spring Cloud Config [https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html)
-- spring-cloud-stream-binder-rabbit [https://github.com/spring-cloud/spring-cloud-stream-binder-rabbit](https://github.com/spring-cloud/spring-cloud-stream-binder-rabbit)
-- Preface [https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.RELEASE/spring-cloud-stream.html#spring-cloud-stream-reference](https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.RELEASE/spring-cloud-stream.html#spring-cloud-stream-reference)
+- Spring Cloud Stream Preface [https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.RELEASE/spring-cloud-stream.html#spring-cloud-stream-reference](https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.RELEASE/spring-cloud-stream.html#spring-cloud-stream-reference)
 
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
@@ -168,6 +167,28 @@
 ####  study-micro-services-stream ####
 - 应用名称 cloud-stream
  - 端口 8803 [http://localhost:8803/](http://localhost:8803/)
+
+验证过程
+
+1.	 应用启动，启动成功后，找到如下类似信息
+
+    `o.s.i.a.i.AmqpInboundChannelAdapter  : started inbound.input.anonymous.bdmVXsWqSROwcFGGI3t4Sw`
+
+2.	 登录 RabbitMQ 控制台，比如 
+
+	[http://localhost:6527/](http://localhost:6527/)
+
+3.	 选择 Queues Tab, 点击之前生成的queue Name  
+
+	`inbound.input.anonymous.bdmVXsWqSROwcFGGI3t4Sw`
+ 
+4.	 点击 Publish message, payload 内容为
+
+    `{"name":"Sam Spade"}`
+
+4.	 点击 Publish message按钮，进行消息发布，即可在控制台打印 
+
+	`Sam Spade`
 
 ## 其他 ##
 导出jar到lib命令 

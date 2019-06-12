@@ -5,9 +5,15 @@ logging:
     level:
       root: info
 
-Spring:
-    application:
+spring:
+  application:
      name: cloud-stream
+  rabbitmq:
+    host: localhost
+    port: 8892
+    username: {your username}
+    password: {your password}
+    virtual-host: /
 
 eureka:
   instance:
