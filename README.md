@@ -1,4 +1,11 @@
 # study-micro-services #
+本项目为微服务学习的实践笔记
+
+全栈工程师 学习笔记 [https://github.com/bage2014/study](https://github.com/bage2014/study)
+
+Spring Boot 项目实践 [https://github.com/bage2014/monitor](https://github.com/bage2014/monitor)
+
+Spring Cloud 多模块实践 [https://github.com/bage2014/my-app](https://github.com/bage2014/my-app)
 
 ## 参考链接 ##
 - Spring Boot引导页： 
