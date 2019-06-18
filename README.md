@@ -170,7 +170,8 @@ Spring Cloud 多模块实践 [https://github.com/bage2014/my-app](https://github
 ####  Spring Cloud Bus Client ####
 - 应用名称 cloud-bus-client
  - 端口 8802 [http://localhost:8802/](http://localhost:8802/) 
- 
+ - 请求用例（8801控制台即可看到打印的消息world） [http://localhost:8802/hello/world](http://localhost:8802/hello/world) 
+
 ####  study-micro-services-stream ####
 - 应用名称 cloud-stream
  - 端口 8803 [http://localhost:8803/](http://localhost:8803/)

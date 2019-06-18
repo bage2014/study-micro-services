@@ -1,14 +1,14 @@
 server:
   port: 8802
   
-Spring:
+spring:
   application:
     name: cloud-bus-client
   rabbitmq:
-    host: 117.50.1.227
-    port: 15672
+    host: 117.48.231.56
+    port: 8892
     username: admin
-    password: admin
+    password: lulu0424.
 
 
 eureka:
