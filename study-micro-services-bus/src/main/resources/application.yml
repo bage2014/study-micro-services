@@ -5,10 +5,10 @@ spring:
   application:
     name: cloud-bus
   rabbitmq:
-    host: 117.48.231.56
+    host: localhost
     port: 8892
     username: admin
-    password: lulu0424.
+    password: admin
 
 
 eureka:
