@@ -4,6 +4,8 @@ import com.bage.study.micro.services.gateway.route.RouteBuilder;
 import com.bage.study.micro.services.gateway.route.dao.RouteMapper;
 import com.bage.study.micro.services.gateway.route.domain.Route;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.json.JsonParser;
+import org.springframework.boot.json.JsonParserFactory;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionRepository;
 import org.springframework.cloud.gateway.support.NotFoundException;
@@ -24,7 +26,9 @@ public class MyRouteDefinitionRepository implements RouteDefinitionRepository,Ro
         try {
             List<Route> routes = queryAll();
             System.out.println("routes:::" + routes.size());
-            return Flux.fromIterable(RouteBuilder.toRouteDefinition(routes));
+            List<RouteDefinition> routeDefinitions = RouteBuilder.toRouteDefinition(routes);
+            System.out.println(routeDefinitions);
+            return Flux.fromIterable(routeDefinitions);
         } catch (Exception e) {
             e.printStackTrace();
             return Flux.empty();

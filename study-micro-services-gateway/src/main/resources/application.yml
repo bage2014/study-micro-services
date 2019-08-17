@@ -11,7 +11,7 @@ Spring:
       - id: cloud-client5
         uri: lb://cloud-client5
         predicates:
-        - Path=/client5/**
+        - Path=/foo/**
 
 eureka:
   instance:
