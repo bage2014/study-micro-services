@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Client2Application {
 
-	@RequestMapping("/")
+	@RequestMapping("/home")
     public String home(HttpServletRequest request) {
     	System.out.println("这是client 2 ");
         return "Hello 2 " + request.getContextPath();
