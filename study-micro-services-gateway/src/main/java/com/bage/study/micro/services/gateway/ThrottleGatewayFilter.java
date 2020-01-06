@@ -16,6 +16,7 @@
 
 package com.bage.study.micro.services.gateway;
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
@@ -48,11 +49,12 @@ public class ThrottleGatewayFilter implements GatewayFilter {
 //		// TODO: get a token bucket for a key
 //		log.debug("TokenBucket capacity: " + tokenBucket.getCapacity());
 //		boolean consumed = tokenBucket.tryConsume();
-//		if (consumed) {
-//			return chain.filter(exchange);
-//		}
-		exchange.getResponse().setStatusCode(HttpStatus.TOO_MANY_REQUESTS);
-		return exchange.getResponse().setComplete();
+		if (Objects.nonNull(first)) {
+			return chain.filter(exchange);
+		} else {
+			exchange.getResponse().setStatusCode(HttpStatus.TOO_MANY_REQUESTS);
+			return exchange.getResponse().setComplete();
+		}
 	}
 
 }

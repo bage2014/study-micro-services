@@ -35,7 +35,7 @@ public class GatewayApplication {
                 .route(r -> r.path("/throttle/**")
                         .filters(f -> f.filter(new ThrottleGatewayFilter())
                                 .addResponseHeader("X-throttle-test", "throttle"))
-                        .uri("http://httpbin.org:80/throttle")
+                        .uri("http://localhost:8888/eurekaClient/clients")
                         .id("throttle")
                 )
                 .build();

@@ -1,10 +1,6 @@
 server:
   port: 8909
-  
-Spring:
-    application:
-     name: cloud-sleuth
-  
+
 eureka:
   instance:
     hostname: localhost
