@@ -114,7 +114,7 @@
         <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
-            <version>4.6</version>
+            <version>5.1</version>
         </dependency>
 
     </dependencies>
