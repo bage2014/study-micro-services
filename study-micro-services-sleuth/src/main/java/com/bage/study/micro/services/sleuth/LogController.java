@@ -5,16 +5,20 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("/log")
 public class LogController {
 
     Logger logger = LoggerFactory.getLogger(LogController.class);
 
     @RequestMapping("/param")
-    public void run(@RequestParam(value = "param", defaultValue = "bage") String param) throws Exception {
+    public String run(@RequestParam(value = "param", defaultValue = "bage") String param) throws Exception {
         logger.info("param = {}", param);
         logger.error("something run. param = {}", param);
+
+
+        return "";
     }
 }
