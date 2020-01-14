@@ -40,6 +40,7 @@
                             <pattern>
                                 {
                                 "severity": "%level",
+                                "appName":"${springAppName:-}",
                                 "service": "${springAppName:-}",
                                 "trace": "%X{X-B3-TraceId:-}",
                                 "span": "%X{X-B3-SpanId:-}",
