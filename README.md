@@ -27,6 +27,20 @@ Spring Cloud 多模块实践 [https://github.com/bage2014/my-app](https://github
 - Spring Cloud Config [https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html](https://cloud.spring.io/spring-cloud-config/spring-cloud-config.html)
 - Spring Cloud Stream Preface [https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.RELEASE/spring-cloud-stream.html#spring-cloud-stream-reference](https://cloud.spring.io/spring-cloud-static/spring-cloud-stream/2.2.0.RELEASE/spring-cloud-stream.html#spring-cloud-stream-reference)
 
+
+
+Spring Cloud Alibaba
+
+https://spring.io/projects/spring-cloud-alibaba
+
+https://spring-cloud-alibaba-group.github.io/github-pages/2021/en-us/index.html
+
+http://c.biancheng.net/springcloud/what-is-alibaba.html
+
+
+
+
+
 ## 项目模块说明 ##
 - study-micro-services-h2 数据库依赖
 - study-micro-services-organization 组织机构服务
@@ -149,12 +163,12 @@ Spring Cloud 多模块实践 [https://github.com/bage2014/my-app](https://github
 #### 客户端实例6 ####
  - 应用名称 cloud-client6
  - 端口 8006 [http://localhost:8006/](http://localhost:8006/ "客户端6")
- 
+
 #### Spring Gateway网关 ####
  - 应用名称 cloud-gateway
  - 端口 8888 [http://localhost:8888/](http://localhost:8888/)
  - 请求client5（clien5中需要client5的mapping） [http://localhost:8888/client5](http://localhost:8888/client5)
-  
+
 #### Spring Gateway 动态路由网关 ####
  - 应用名称 cloud-gateway
  - 端口 8888 [http://localhost:8888/](http://localhost:8888/)
@@ -166,7 +180,7 @@ Spring Cloud 多模块实践 [https://github.com/bage2014/my-app](https://github
 ####  Spring Cloud Bus ####
 - 应用名称 cloud-bus
  - 端口 8801 [http://localhost:8801/](http://localhost:8801/)
- 
+
 ####  Spring Cloud Bus Client ####
 - 应用名称 cloud-bus-client
  - 端口 8802 [http://localhost:8802/](http://localhost:8802/) 
@@ -189,7 +203,7 @@ Spring Cloud 多模块实践 [https://github.com/bage2014/my-app](https://github
 3.	 选择 Queues Tab, 点击之前生成的queue Name  
 
 	`inbound.input.anonymous.bdmVXsWqSROwcFGGI3t4Sw`
- 
+
 4.	 点击 Publish message, payload 内容为
 
     `{"name":"Sam Spade"}`
@@ -202,7 +216,7 @@ Spring Cloud 多模块实践 [https://github.com/bage2014/my-app](https://github
 导出jar到lib命令 
 
     mvn dependency:copy-dependencies -DoutputDirectory=lib
-	
+
 
 ## eureka原理 ##
 - 深入理解Eureka - Eureka架构综述 [http://www.majunwei.com/view/201808130819216747.html](http://www.majunwei.com/view/201808130819216747.html)
