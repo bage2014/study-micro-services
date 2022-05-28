@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/study-micro-services.iml" filepath="$PROJECT_DIR$/.idea/study-micro-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-bus/study-micro-services-bus.iml" filepath="$PROJECT_DIR$/study-micro-services-bus/study-micro-services-bus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-bus-client/study-micro-services-bus-client.iml" filepath="$PROJECT_DIR$/study-micro-services-bus-client/study-micro-services-bus-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-config/study-micro-services-config.iml" filepath="$PROJECT_DIR$/study-micro-services-config/study-micro-services-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-config-client/study-micro-services-config-client.iml" filepath="$PROJECT_DIR$/study-micro-services-config-client/study-micro-services-config-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-distribute-transaction/study-micro-services-distribute-transaction.iml" filepath="$PROJECT_DIR$/study-micro-services-distribute-transaction/study-micro-services-distribute-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka/study-micro-services-eureka.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka/study-micro-services-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka-client1/study-micro-services-eureka-client1.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka-client1/study-micro-services-eureka-client1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka-client2/study-micro-services-eureka-client2.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka-client2/study-micro-services-eureka-client2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka-client3/study-micro-services-eureka-client3.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka-client3/study-micro-services-eureka-client3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka-client4/study-micro-services-eureka-client4.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka-client4/study-micro-services-eureka-client4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka-client5/study-micro-services-eureka-client5.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka-client5/study-micro-services-eureka-client5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka-client6/study-micro-services-eureka-client6.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka-client6/study-micro-services-eureka-client6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka-server2/study-micro-services-eureka-server2.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka-server2/study-micro-services-eureka-server2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-eureka-server3/study-micro-services-eureka-server3.iml" filepath="$PROJECT_DIR$/study-micro-services-eureka-server3/study-micro-services-eureka-server3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-feign/study-micro-services-feign.iml" filepath="$PROJECT_DIR$/study-micro-services-feign/study-micro-services-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-gateway/study-micro-services-gateway.iml" filepath="$PROJECT_DIR$/study-micro-services-gateway/study-micro-services-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-gateway-dynamic/study-micro-services-gateway-dynamic.iml" filepath="$PROJECT_DIR$/study-micro-services-gateway-dynamic/study-micro-services-gateway-dynamic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-h2/study-micro-services-h2.iml" filepath="$PROJECT_DIR$/study-micro-services-h2/study-micro-services-h2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-hystrix/study-micro-services-hystrix.iml" filepath="$PROJECT_DIR$/study-micro-services-hystrix/study-micro-services-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-multi-datasources/study-micro-services-multi-datasources.iml" filepath="$PROJECT_DIR$/study-micro-services-multi-datasources/study-micro-services-multi-datasources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-organization/study-micro-services-organization.iml" filepath="$PROJECT_DIR$/study-micro-services-organization/study-micro-services-organization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-ribbon/study-micro-services-ribbon.iml" filepath="$PROJECT_DIR$/study-micro-services-ribbon/study-micro-services-ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-sleuth/study-micro-services-sleuth.iml" filepath="$PROJECT_DIR$/study-micro-services-sleuth/study-micro-services-sleuth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-spring-boot/study-micro-services-spring-boot.iml" filepath="$PROJECT_DIR$/study-micro-services-spring-boot/study-micro-services-spring-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-spring-cloud-netflix/study-micro-services-spring-cloud-netflix.iml" filepath="$PROJECT_DIR$/study-micro-services-spring-cloud-netflix/study-micro-services-spring-cloud-netflix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-stream/study-micro-services-stream.iml" filepath="$PROJECT_DIR$/study-micro-services-stream/study-micro-services-stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-turbine/study-micro-services-turbine.iml" filepath="$PROJECT_DIR$/study-micro-services-turbine/study-micro-services-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-zuul/study-micro-services-zuul.iml" filepath="$PROJECT_DIR$/study-micro-services-zuul/study-micro-services-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study-micro-services-zuul-dynamic-routes/study-micro-services-zuul-dynamic-routes.iml" filepath="$PROJECT_DIR$/study-micro-services-zuul-dynamic-routes/study-micro-services-zuul-dynamic-routes.iml" />
+    </modules>
+  </component>
+</project>
