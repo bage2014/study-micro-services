@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-bus-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-bus-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-bus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-bus/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-config-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-config-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-distribute-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-distribute-transaction/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client3/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client4/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client4/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client5/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client5/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client6/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-client6/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-server2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-server2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-server3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka-server3/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-feign/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-gateway-dynamic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-gateway-dynamic/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-h2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-h2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-hystrix/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-multi-datasources/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-multi-datasources/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-organization/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-organization/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-ribbon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-ribbon/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-sleuth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-sleuth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-spring-boot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-spring-boot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-spring-cloud-netflix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-spring-cloud-netflix/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-stream/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-turbine/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-zuul-dynamic-routes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-zuul-dynamic-routes/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-zuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/study-micro-services-zuul/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="study-micro-services-hystrix" />
+        <module name="study-micro-services-bus-client" />
+        <module name="study-micro-services-config-client" />
+        <module name="study-micro-services-config" />
+        <module name="study-micro-services-feign" />
+        <module name="study-micro-services-spring-boot" />
+        <module name="study-micro-services-zuul" />
+        <module name="study-micro-services-gateway-dynamic" />
+        <module name="study-micro-services-ribbon" />
+        <module name="study-micro-services-sleuth" />
+        <module name="study-micro-services-h2" />
+        <module name="study-micro-services-multi-datasources" />
+        <module name="study-micro-services-turbine" />
+        <module name="study-micro-services-gateway" />
+        <module name="study-micro-services-organization" />
+        <module name="study-micro-services-stream" />
+        <module name="study-micro-services-eureka-client2" />
+        <module name="study-micro-services-eureka-client1" />
+        <module name="study-micro-services-distribute-transaction" />
+        <module name="study-micro-services-eureka-client4" />
+        <module name="study-micro-services-eureka-client3" />
+        <module name="study-micro-services-eureka-client6" />
+        <module name="study-micro-services-eureka-client5" />
+        <module name="study-micro-services-spring-cloud-netflix" />
+        <module name="study-micro-services-zuul-dynamic-routes" />
+        <module name="study-micro-services-eureka-server2" />
+        <module name="study-micro-services-eureka" />
+        <module name="study-micro-services-eureka-server3" />
+        <module name="study-micro-services-bus" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
